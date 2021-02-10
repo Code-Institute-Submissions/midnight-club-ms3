@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows Display</title>
+</head>
+<body>
+    {% for show in shows %}
+        {{ show.show_name }}<br>
+        {{ show.show_date }}<br>
+        {{ show.show_type }}<br>
+        {{ show.show_location }}<br>
+        {{ show.show_start }}<br>
+    {% endfor %}
+</body>
+</html>
