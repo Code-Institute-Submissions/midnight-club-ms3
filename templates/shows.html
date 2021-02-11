@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
     {% for show in shows %}
         {{ show.show_name }}<br>
         {{ show.show_date }}<br>
@@ -9,5 +10,6 @@
         {{ show.show_start }}<br>
         {{ show.show_description }}<br>
     {% endfor %}
+
 
 {% endblock %}

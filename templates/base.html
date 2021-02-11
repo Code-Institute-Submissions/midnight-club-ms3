@@ -13,9 +13,64 @@
     <title>Midnight Club</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg nav-text nav-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('show_display') }}">
+                    <h1 id="logo">Mid Night Club</h1>
+                </a>
+                <button class="navbar-toggler fas fa-bars" type="button" data-toggle="collapse" data-target="#mobile-navdrop"
+                    aria-controls="mobile-navdrop" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mobile-navdrop">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_display') }}">Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Event's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     
     {% block content %}
     {% endblock %}
+    
+    <footer>
+        <ul class="nav-bg nav-bar navbar-dark fixed-bottom" id="nav-footer">
+            <li class="nav-link"><a href="https://github.com/" target="_blank"><i 
+                class="fab fa-github"></i></a></li>
+            <li class="nav-link"><a href="https://www.instagram.com/" target="_blank"><i
+                class="fab fa-instagram"></i></a></li>
+            <li class="nav-link"><a href="https://www.linkedin.com" target="_blank"><i
+                class="fab fa-linkedin"></i></a></li>
+            <li class="nav-link"><a href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook"></i></a></li>
+        </ul>
+    </footer>
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" 
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

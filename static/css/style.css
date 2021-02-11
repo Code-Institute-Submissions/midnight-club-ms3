@@ -1,0 +1,20 @@
+.nav-bg {
+    background-color: rgba(60, 9, 108, 0.8);
+}
+
+.nav-text a {
+    color: rgb(254, 228, 64);
+}
+
+body {
+    background-color: #9D4EDD;
+    color: white;
+}
+
+.card-bg {
+    background-color: rgba(103, 40, 158, 0.5);
+}
+
+.card-body{
+    color: white;
+}
