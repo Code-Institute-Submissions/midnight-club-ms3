@@ -18,3 +18,8 @@ body {
 .card-body{
     color: white;
 }
+
+.flashes h4{
+    line-height: 2;
+    display: block;
+}
