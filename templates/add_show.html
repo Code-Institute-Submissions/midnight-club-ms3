@@ -5,22 +5,55 @@
     <h3 class="align-center">Add Show</h3>
 
 
-    <form method="POST" action="">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="container col-md-8">
+        <form method="POST" action="">
+            <div class="row">
+                <div class="mb-3 col-md-8">
+                    <label for="show_name" class="form-label">Show Name</label>
+                    <input type="text" name="show_name" class="form-control" id="show_name"
+                        placeholder="Show Name" minlength="5" maxlength="50" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-8">
+                    <label for="show_date" class="form-label">Show Date</label>
+                    <input type="text" name="show_date" class="form-control" id="show_date"
+                        placeholder="What Time Does the show start" minlength="4" maxlength="50" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-8">
+                    <label for="show_location" class="form-label">Show Location</label>
+                    <input type="text" name="show_location" class="form-control" id="show_location"
+                        placeholder="Where is the show being held" minlength="4" maxlength="50" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-8">
+                    <label for="show_start" class="form-label">Show Start Time</label>
+                    <input type="text" name="show_start" class="form-control" id="show_start"
+                        placeholder="What Time Does the show start" minlength="4" maxlength="50" required>
+                    <div id="emailHelp" class="">Please enter in 24hr clock format e.g 6pm would be 18:00</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <select name="show_type" id="show_type">
+                    <option value="" disabled selected>Choose Show Type</option>
+                    {% for genre in genre %}
+                        <option value="{{ genre.show_type }}">{{ genre.show_type }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-8">
+                    <label for="show_description">Show Description</label>
+                    <textarea class="form-control textarea-desc" 
+                        placeholder="What makes this car show different from the rest" id="show_description" minlength="20"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
 
 {% endblock %}

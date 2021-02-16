@@ -102,7 +102,9 @@ def logout():
 
 @app.route("/add_show")
 def add_show():
-    return render_template("add_show.html")
+    genre = mongo.db.genre.find().sort("show_type", 1)
+    return render_template("add_show.html", genre=genre)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
